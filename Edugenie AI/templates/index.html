@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - Learning Assistant</title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>EduGenie</h1>
+
+            <p>
+                Google Gemini Powered Learning Assistant
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="card">
+
+            <h2>Learning Assistant</h2>
+
+            <p class="description">
+                Ask questions, learn concepts, generate quizzes,
+                summarize content, or create a learning path.
+            </p>
+
+
+            <label for="task">
+                Select a Task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Q&amp;A
+                </option>
+
+                <option value="explain">
+                    Explain a Topic
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize
+                </option>
+
+                <option value="learn">
+                    Recommend Learning Path
+                </option>
+
+            </select>
+
+
+            <label for="inputText">
+                Enter your question or content
+            </label>
+
+            <textarea
+                id="inputText"
+                rows="10"
+                placeholder="Enter your question, topic, or educational content here..."
+            ></textarea>
+
+
+            <div class="button-group">
+
+                <button
+                    id="generateButton"
+                    type="button"
+                >
+                    Generate Result
+                </button>
+
+                <button
+                    id="clearButton"
+                    type="button"
+                    class="secondary-button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div
+                id="status"
+                class="status"
+            ></div>
+
+        </section>
+
+
+        <section
+            id="resultSection"
+            class="card result-card"
+        >
+
+            <h2>Result</h2>
+
+            <div id="result">
+                Your result will appear here.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            EduGenie &copy; 2026
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script
+        src="{{ url_for('static', path='js/app.js') }}"
+    ></script>
+
+</body>
+
+</html>
